@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+	<div></div>
+	<script type="text/javascript">
+		let news=[
+		{newsTitle: 'First Title',newsContent:'hello world'},
+		{newsTitle: 'Second Title',newsContent:'callback function'}
+		
+		]
+
+		function showNews() {
+			setTimeout(() =>{
+				let result= " "
+				news.forEach((post)=> {
+					result += `<li> ${post.newsTitle} </li>`
+
+
+			})
+				document.querySelector('div').innerHTML=result
+			},2000)
+
+		}
+		
+		//call the showNews() function
+		// showNews()
+
+		//define addNews()
+		//function addNews(newsdata) {
+			//setTimeout(()=> {
+				//news.push(newsdata)
+
+			//},3000)
+		//}
+
+		// call the function addNews()
+		//addNews({newsTitle:'Third Title', newsContent:'added from another function'})
+
+
+		function addNews(newsdata,callback_func){
+			setTimeout(()=> {
+				news.push(newsdata)
+				// call the function after adding news
+				callback_func()
+
+			},3000)
+
+		}
+		// call the addnews function with showNews() as callback
+addNews({newsTitle:'Third Title', newsContent:'added from another function'},showNews)
+
+		
+
+		
+	</script>
+
+</body>
+</html>

@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>image zoom</title>
+	<style>
+		.container{
+			height: 300px;
+			widows: 600px;
+			margin: auto;
+			border:5px solid red;
+			overflow: hidden;
+		}
+		.container img{
+			height: 100%;
+			width: 100%;
+			transition: all 3s;
+		}
+		.container:hover img{
+			transform:scale(1.5);
+		}
+	</style>
+</head>
+<body>
+	<div class="container">
+		<img src="1.jpg" height="100%" width="100%">
+	</div>
+
+</body>
+</html>

@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>imageslider</title>
+	<style>
+		.container{
+			height: 350px;
+			width: 700px;
+			margin: auto;
+			position: relative;
+		}
+		.container img{
+			height: 100%;
+			width: 100%;
+		}
+		.left{
+			font-size: 35px;
+			background-color: dodgerblue;
+			color: #ffff;
+			border:none;
+			position: absolute;
+			left: 0;
+			top: 10%;
+		}
+		.right{
+			font-size: 35px;
+			background-color: dodgerblue;
+			color: #ffff;
+			border:none;
+			position: absolute;
+			right: 0;
+			top: 40%;
+		}
+	</style>
+</head>
+<body>
+	<div class="container">
+		<img src="images/1.jpg" alt="">
+		<button class="left"  onclick="prev()">&lt;</button>
+		<button class="right" onclick="next()">&gt;</button>
+	    </div>
+
+
+</body>
+</html>
